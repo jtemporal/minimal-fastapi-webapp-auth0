@@ -2,6 +2,7 @@
   {% if request.session %}
     <a href="{{ url_for('logout') }}">Log Out</a>
     <a href="{{ url_for('profile') }}">Profile</a>
+    <a href="{{ url_for('home') }}">Home</a>
   {% else %}
     <a href="{{ url_for('login') }}" >Log In</a>
   {% endif %}
