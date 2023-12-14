@@ -3,10 +3,10 @@ from fastapi import APIRouter, Request
 from config import templates
 
 
-app_router = APIRouter()
+webapp_router = APIRouter()
 
 
-@app_router.get("/")
+@webapp_router.get("/")
 def home(request: Request):
 
     return templates.TemplateResponse(
@@ -17,7 +17,7 @@ def home(request: Request):
     )
 
 
-@app_router.get("/profile")
+@webapp_router.get("/profile")
 def profile(request: Request):
 
     return templates.TemplateResponse(
