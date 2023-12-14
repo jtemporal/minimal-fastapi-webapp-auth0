@@ -42,7 +42,7 @@ Rewatch this live stream on FastAPI authentication with Auth0 and Jinja template
 - On [YouTube](https://www.youtube.com/watch?v=BMLaMdob3Cs)
 
 Where to find us: 
-• Jess' LinkedIn: http://linkedin.com/in/jessicatemporal/
-• Juan's LinkedIn: https://www.linkedin.com/in/bajcmartinez/
+* Jess' LinkedIn: http://linkedin.com/in/jessicatemporal/
+* Juan's LinkedIn: https://www.linkedin.com/in/bajcmartinez/
 
 Sign up for Auth0's developer newsletter here: https://a0.to/nl-signup/python
