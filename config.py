@@ -5,6 +5,8 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
 
+from utils import to_pretty_json
+
 
 def load_config():
     """
@@ -23,6 +25,7 @@ def configure_templates():
     Creates templates from the templates folder within the webapp
     """
     templates = Jinja2Templates(directory="webapp/templates")
+    templates.env.filters['to_pretty_json'] = to_pretty_json
     return templates
 
 
