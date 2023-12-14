@@ -32,7 +32,7 @@ This application is a sample on how to integrate Auth0 for authentication in a F
    uvicorn main:app --reload
    ```
    
-5. Visit `http://localhost:8000`
+5. Visit [`http://localhost:8000`](http://localhost:8000) to access the web application.
 
 ----
 
