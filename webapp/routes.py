@@ -15,3 +15,15 @@ def home(request: Request):
             "request": request
         }
     )
+
+
+@app_router.get("/profile")
+def profile(request: Request):
+
+    return templates.TemplateResponse(
+        "profile.html",
+        {
+            "request": request,
+            "userinfo": request.session['userinfo']
+        }
+    )
