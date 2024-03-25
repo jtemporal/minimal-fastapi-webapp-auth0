@@ -1,6 +1,6 @@
 import configparser
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
@@ -43,3 +43,14 @@ def create_app():
 
 
 app = create_app()
+
+
+@app.exception_handler(404)
+async def custom_404_handler(request: Request, _):
+    return templates.TemplateResponse(
+        "404.html",
+        {
+            "request": request,
+            "message": "The page you are looking for does not exist. 👀"
+        }
+    )
