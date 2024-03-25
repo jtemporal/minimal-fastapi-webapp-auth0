@@ -1,5 +1,6 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Depends, Request
 
+from auth.dependencies import ProtectedEndpoint
 from config import templates
 
 
@@ -17,7 +18,7 @@ def home(request: Request):
     )
 
 
-@webapp_router.get("/profile")
+@webapp_router.get("/profile", dependencies=[Depends(ProtectedEndpoint)])
 def profile(request: Request):
 
     return templates.TemplateResponse(
