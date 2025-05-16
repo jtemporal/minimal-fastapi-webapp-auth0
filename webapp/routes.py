@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, Request
+from fastapi.responses import RedirectResponse
 
 from auth.dependencies import ProtectedEndpoint
 from config import templates
@@ -28,3 +29,8 @@ def profile(request: Request):
             "userinfo": request.session['userinfo']
         }
     )
+
+@webapp_router.get("/redirect-example", dependencies=[Depends(ProtectedEndpoint)])
+def redirect_example(request: Request):
+
+    return RedirectResponse(url=request.url_for("home"))
