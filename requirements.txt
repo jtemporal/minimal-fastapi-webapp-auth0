@@ -1,6 +1,5 @@
-Authlib==1.2.1
-fastapi==0.104.1
-httpx==0.25.2
-itsdangerous==2.1.2
-jinja2==3.1.2
-uvicorn==0.24.0.post1
+auth0-fastapi==1.0.0b4
+auth0-server-python==1.0.0b4
+fastapi==0.115.12
+jinja2==3.1.6
+uvicorn==0.34.2

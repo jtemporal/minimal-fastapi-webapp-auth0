@@ -1,7 +1,7 @@
 <div>
-  {% if request.session %}
+  {% if session %}
     <a href="{{ url_for('logout') }}">Log Out</a>
-    <a href="{{ url_for('profile') }}">Profile</a>
+    <a href="/profile">Profile</a>
     <a href="{{ url_for('home') }}">Home</a>
   {% else %}
     <a href="{{ url_for('login') }}" >Log In</a>

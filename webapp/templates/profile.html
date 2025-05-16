@@ -7,12 +7,12 @@
 <div>
   <h2>Profile</h2>
   <div>
-    <p>Welcome home {{request.session['userinfo'].name }}!</p>
+    <p>Welcome home {{ user['nickname'] }}!</p>
   </div>
   <div>
     <p class="json-title">Here is your profile information:</p>
     <div class="json-container">
-      <pre>{{ request.session['userinfo'] | to_pretty_json }}</pre>
+      <pre>{{ session["user"] | to_pretty_json }}</pre>
     </div>
   </div>
 </div>
