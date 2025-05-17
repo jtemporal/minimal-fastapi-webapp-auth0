@@ -5,13 +5,15 @@ This application is a sample on how to integrate Auth0 for authentication in a F
 ## How to run the server
 
 1. Clone this repository
-    ```
-    git clone https://github.com/jtemporal/minimal-fastapi-webapp-auth0.git && cd minimal-fastapi-webapp-auth0
-    ```
+   ```
+   git clone https://github.com/jtemporal/minimal-fastapi-webapp-auth0.git && cd minimal-fastapi-webapp-auth0
+   ```
+
 2. Create a `.config` file from `.config.example` and populate the values from your Auth0 Application. Here is 
    ```
    cp .config.example .config
    ```
+   Tip: you can use `openssl rand -hex 32` for the secret key.
 
 3. Create a virtual environment and install dependencies
    
